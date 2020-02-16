@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url  # this works in django 1.6 and later
+from django.conf.urls import include  # this works in django 1.6 and later
+
 from first_app import views
 urlpatterns = [
     url(r'^$',views.index,name='index'),
+    url(r'^first_app/', include('first_app.urls')),
     path('admin/', admin.site.urls),
 ]
