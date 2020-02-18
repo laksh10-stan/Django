@@ -5,3 +5,6 @@ img{
   max-width: 99%;
  max-height: 99%;
 }
+table, td, tr{
+  border: 2px solid aqua;
+}
